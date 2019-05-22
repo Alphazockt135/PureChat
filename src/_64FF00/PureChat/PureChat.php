@@ -371,7 +371,17 @@ class PureChat extends PluginBase
 
                     break;
 
-                case "xeviouspe-factions":
+                case "BedrockClans":
+
+                    if($this->getServer()->getPluginManager()->getPlugin("BedrockClans") !== null)
+                    {
+                        $this->factionsAPI = new BedrockClans();
+
+                        $this->getLogger()->notice("BedrockClans support enabled.");
+
+                        break;
+                    
+                   case "xeviouspe-factions":
 
                     if($this->getServer()->getPluginManager()->getPlugin("XeviousPE-Factions") !== null)
                     {
